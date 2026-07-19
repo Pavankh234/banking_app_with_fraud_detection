@@ -9,6 +9,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+//this response object is the one which the controller ultimately returns so that frontend can make use of it
 public class AccountResponse {
     private String id;
     private String accountNumber;

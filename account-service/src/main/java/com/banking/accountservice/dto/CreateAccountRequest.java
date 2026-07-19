@@ -15,6 +15,8 @@ import java.math.BigDecimal;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+
+// this is the request object which the controller will receive and validate it and send to service ( Note : Jackson will convert J-son body to this request object)
 public class CreateAccountRequest {
 
     @NotBlank(message = "Account holder name is required")
