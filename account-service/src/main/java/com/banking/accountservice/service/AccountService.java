@@ -14,11 +14,12 @@ import org.springframework.stereotype.Service;
 public class AccountService {
     private final AccountRepository accountRepository;
     public AccountResponse createAccount(CreateAccountRequest request) {
-        log.info("I am creating account for :{} ",request.getEmail());
-        if(accountRepository.existsByEmail(request.getEmail()))
-        {
-            throw new RuntimeException("Account already exists for email {}"+ request.getEmail());
+        log.info("I am creating account for :{} ", request.getEmail());
+        if (accountRepository.existsByEmail(request.getEmail())) {
+            throw new RuntimeException("Account already exists for email {}" + request.getEmail());
 
         }
+        //change this return type
+        return null;
     }
 }
