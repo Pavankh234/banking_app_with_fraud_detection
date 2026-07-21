@@ -57,7 +57,7 @@ public class AccountController {
      * deduct balance
      * called by transaction service when a transfer is initiated
      */
-    @PutMapping("/{accountNumber}/deduct")
+    @PutMapping("/{accountNumber}/deduct/{amount}")
     public ResponseEntity<String> deductBalance(
             @PathVariable String accountNumber,
             @PathVariable BigDecimal amount){
@@ -73,7 +73,7 @@ public class AccountController {
      * 2. Transaction completed -> credit receiver
      */
 
-    @PutMapping("/{accountNumber}/credit")
+    @PutMapping("/{accountNumber}/credit/{amount}")
     public ResponseEntity<String> creditBalance(
             @PathVariable String accountNumber,
             @PathVariable BigDecimal amount){
