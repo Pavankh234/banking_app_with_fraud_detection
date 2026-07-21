@@ -1,3 +1,9 @@
+fraud:
+  max-transaction-per-minute: 5
+
 spring:
   application:
     name: fraud-detection-service
+  account:
+    service:
+      url: http://localhost:8081
